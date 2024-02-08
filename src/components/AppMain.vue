@@ -1,5 +1,5 @@
 <script>
-import BaseList from './components/BaseList.vue'
+import BaseList from './BaseList.vue'
 export default {
     name: "AppMain",
     components: { BaseList }

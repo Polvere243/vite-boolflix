@@ -6,13 +6,16 @@ export default {
     }),
     props: {
         defaultText: String
-    }
+    },
+    emits: [""]
 }
 </script>
 
 <template>
     <form>
-        <input type="text" :placeholder="defaultText" v-model="textToSearch">
-        <button>Cerca</button>
+        <input type="text" :placeholder="defaultText" v-model.trim="textToSearch" @keyup="">
+        <button>
+            CERCA
+        </button>
     </form>
 </template>
