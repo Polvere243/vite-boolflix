@@ -19,3 +19,10 @@ export default {
         </button>
     </form>
 </template>
+
+<style lang="scss" scoped>
+input,
+button {
+    padding: 5px 10px;
+}
+</style>
