@@ -2,14 +2,16 @@
 import BaseForm from './BaseForm.vue'
 export default {
     name: "AppHeader",
-    components: { BaseForm }
+    components: { BaseForm },
+    emits: ["reach-up"]
 }
 </script>
 
 <template>
     <header>
         <nav>
-            <BaseForm default-text="Cerca Titolo" />
+            <BaseForm default-text="Cerca Titolo" @text-wrote="$('reach - up')" />
+
         </nav>
     </header>
 </template>

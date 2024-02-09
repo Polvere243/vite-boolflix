@@ -1,4 +1,5 @@
 <script>
+
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
 
@@ -8,12 +9,17 @@ export default {
     components: {
         AppHeader,
         AppMain
+    },
+    methods: {
+        fetchMovies() {
+            console.log("Cliccami tutto");
+        }
     }
 }
 </script>
 
 <template>
-    <AppHeader />
+    <AppHeader @reach_up="fetchMovies" />
     <AppMain />
 </template>
 
