@@ -3,14 +3,14 @@ import BaseForm from './BaseForm.vue'
 export default {
     name: "AppHeader",
     components: { BaseForm },
-    emits: ["reach-up"]
+    emits: ['search-text']
 }
 </script>
 
 <template>
     <header>
         <nav>
-            <BaseForm default-text="Cerca Titolo" @text-wrote="$('reach - up')" />
+            <BaseForm default-text="Cerca..." @text-wrote="$emit('search-text', $event)" />
 
         </nav>
     </header>

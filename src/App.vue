@@ -11,15 +11,15 @@ export default {
         AppMain
     },
     methods: {
-        fetchMovies() {
-            console.log("Cliccami tutto");
+        fetchMovies(pippo) {
+
         }
     }
 }
 </script>
 
 <template>
-    <AppHeader @reach_up="fetchMovies" />
+    <AppHeader @search-text="fetchMovies" />
     <AppMain />
 </template>
 

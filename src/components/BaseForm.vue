@@ -2,20 +2,20 @@
 export default {
     name: "BaseForm",
     data: () => ({
-        textToSearch: ""
+        textToSearchFor: ""
     }),
     props: {
         defaultText: String,
     },
-    emits: ["text-wrote"]
+    emits: ['text-wrote']
 }
 </script>
 
 <template>
-    <form>
-        <input type="text" :placeholder="defaultText" v-model.trim="textToSearch"
-            @keyup="$emit('text-wrote', textToSearch)">
-        <button @click.prevent="$emit('text-wrote', textToSearch)">
+    <form @submit.prevent="$emit('text-wrote', textToSearchFor)">
+        <input type="text" :placeholder="defaultText" v-model.trim="textToSearchFor"
+            @keyup="$emit('text-wrote', textToSearchFor)">
+        <button>
             <FontAwesomeIcon icon="fas fa-magnifying-glass" />
         </button>
     </form>
