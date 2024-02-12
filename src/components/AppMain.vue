@@ -1,5 +1,5 @@
 <script>
-import { store } from './assets/data/store.js';
+import { store } from '../assets/data/store.js';
 import BaseList from './BaseList.vue'
 export default {
     name: "AppMain",
