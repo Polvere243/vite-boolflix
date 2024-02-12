@@ -1,12 +1,19 @@
 <script>
 
 export default {
-    name: "BaseList"
+    name: "BaseList",
+    props: {
+        movies: Array,
+        tvShows: Array
+    }
 }
+
 </script>
 
 <template>
     <ul>
-        <li></li>
+        <li>
+
+        </li>
     </ul>
 </template>
