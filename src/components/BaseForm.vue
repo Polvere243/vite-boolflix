@@ -13,8 +13,7 @@ export default {
 
 <template>
     <form @submit.prevent="$emit('text-wrote', textToSearchFor)">
-        <input type="text" :placeholder="defaultText" v-model.trim="textToSearchFor"
-            @keyup="$emit('text-wrote', textToSearchFor)">
+        <input type="text" :placeholder="defaultText" v-model.trim="textToSearchFor" @keyup="$emit('text-wrote', textToSearchFor)">
         <button>
             <FontAwesomeIcon icon="fas fa-magnifying-glass" />
         </button>

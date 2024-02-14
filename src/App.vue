@@ -15,7 +15,7 @@ export default {
         AppMain,
         BaseDiv
     },
-    data: () => store,
+
 
     methods: {
         fetchMovies(term) {
@@ -25,11 +25,11 @@ export default {
             axios.get(searchEndpoint).then(res => {
                 store.movies = res.data.results.map(movie => {
                     return {
-                        id,
+                        id: movie._id,
                         lang: movie.original_language,
-                        originalTitle: original_title,
+                        originalTitle: movie.original_title,
                         plot: movie.overview,
-                        title,
+                        title: movie.title,
                         vote: movie.average_vote,
                         imgage: movie.poster_path
                     }
@@ -42,10 +42,11 @@ export default {
             const searchEndpoint = `${uri}${tvShowsEndpoint}?query=${term}&api_key=${apiKey}`;
             axios.get(searchEndpoint).then(res => {
                 store.tvShows = res.data.results.map(tvShow => {
+                    console.log(res.data.results);
                     return {
-                        id,
+                        id: tvShow._id,
                         lang: tvShow.original_language,
-                        originalTitle: tvShoworiginal_name,
+                        originalTitle: tvShow.original_name,
                         plot: tvShow.overview,
                         title: tvShow.name,
                         vote: tvShow.average_vote,
